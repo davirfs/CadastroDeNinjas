@@ -6,7 +6,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "tb_cadastro")
-public class Ninja {
+public class Pessoa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,13 +18,13 @@ public class Ninja {
 
     private Integer idade;
 
-    public Ninja(String nome, String email, Integer idade) {
+    public Pessoa(String nome, String email, Integer idade) {
         this.nome = nome;
         this.email = email;
         this.idade = idade;
     }
 
-    public Ninja() {
+    public Pessoa() {
     }
 
     public String getNome() {
@@ -54,8 +54,8 @@ public class Ninja {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Ninja ninja = (Ninja) o;
-        return Objects.equals(nome, ninja.nome) && Objects.equals(email, ninja.email) && Objects.equals(idade, ninja.idade);
+        Pessoa pessoa = (Pessoa) o;
+        return Objects.equals(nome, pessoa.nome) && Objects.equals(email, pessoa.email) && Objects.equals(idade, pessoa.idade);
     }
 
     @Override
@@ -65,7 +65,7 @@ public class Ninja {
 
     @Override
     public String toString() {
-        return "Ninja{" +
+        return "Pessoa{" +
                 "nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", idade=" + idade +
