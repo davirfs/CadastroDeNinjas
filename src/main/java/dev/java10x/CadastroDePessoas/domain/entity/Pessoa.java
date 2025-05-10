@@ -1,4 +1,4 @@
-package dev.java10x.CadastroDeNinjas.domain.entity;
+package dev.java10x.CadastroDePessoas.domain.entity;
 
 import jakarta.persistence.*;
 
